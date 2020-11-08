@@ -75,7 +75,9 @@ def get_weather_data():
     '''
     
     plant1_weather = pd.read_csv('archive/Plant_1_Weather_Sensor_Data.csv')
+    plant1_weather['DATE_TIME'] = pd.to_datetime(plant1_weather['DATE_TIME'])
     plant2_weather = pd.read_csv('archive/Plant_2_Weather_Sensor_Data.csv')
+    plant2_weather['DATE_TIME'] = pd.to_datetime(plant2_weather['DATE_TIME'])
     # The two data sets have the same columns
     assert(set(plant1_weather)==set(plant2_weather))
     # Combine data sets

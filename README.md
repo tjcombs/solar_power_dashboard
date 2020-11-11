@@ -26,6 +26,11 @@ conda create -n solar_power_dashboard python=3.8
 conda activate solar_power_dashboard
 ```
 
+Install fbprophet
+```bash
+conda install -c conda-forge fbprophet
+```
+
 Install the dependencies
 ```bash
 pip install -r requirements.txt
